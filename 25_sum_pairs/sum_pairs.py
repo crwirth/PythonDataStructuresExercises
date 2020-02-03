@@ -21,3 +21,17 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+
+    alr_vst = set()
+
+    for i in nums:
+        diff = goal - i
+
+        if diff in alr_vst:
+            return (diff, i)
+
+        alr_vst.add(i)
+
+    return ()
+
+sum_pairs([1, 2, 2, 10], 4)
